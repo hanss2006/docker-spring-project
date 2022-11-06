@@ -1,12 +1,15 @@
 version: "3"
 services:
-  web-app-db:
-    image: postgres
+  postgres:
+    image: postgres:15
+    container_name: "web-app-db-postgres"
     environment:
-      - POSTGRES_ROOT_PASSWORD=password
-      - POSTGRES_DATABASE=service
-  web-app:
+      - POSTGRES_USER=service
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=service
+  app:
     build: ./back
+    container_name: "web-app"
     ports:
       - "8080:8080"
     depends_on:
