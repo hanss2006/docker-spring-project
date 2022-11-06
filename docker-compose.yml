@@ -12,5 +12,11 @@ services:
     container_name: "web-app"
     ports:
       - "8080:8080"
+      - "8000:8000"
+    environment:
+      - JPDA_ADDRESS=8000
+      - JPDA_TRANSPORT=dt_socket
     depends_on:
-      - web-app-db
+      - postgres
+    command: "/usr/local/tomcat/bin/catalina.sh jpda run"
+    restart: always
