@@ -18,5 +18,4 @@ services:
       - JPDA_TRANSPORT=dt_socket
     depends_on:
       - postgres
-    command: "/usr/local/tomcat/bin/catalina.sh jpda run"
     restart: always
