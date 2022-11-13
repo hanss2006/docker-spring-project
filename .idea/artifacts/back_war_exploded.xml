@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="back:war exploded">
-    <output-path>$PROJECT_DIR$/back/target/docker-spring-0.0.1-SNAPSHOT</output-path>
+    <output-path>$PROJECT_DIR$/back/target/api#docker-spring</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
@@ -45,7 +45,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/back/target/docker-spring-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/back/target/api#docker-spring/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="back/web/Web" />
     </root>
